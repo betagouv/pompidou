@@ -21,6 +21,11 @@ development:
   primary:
     <<: *default
     database: development
+  queue:
+    <<: *default
+    url: <%= ENV.fetch("DATABASE_URL") %>
+    database: development_jobs_queue
+    migrations_paths: db/queue_migrate
   emdb:
     <<: *emdb
 
@@ -42,6 +47,7 @@ production:
     migrations_paths: db/cache_migrate
   queue:
     <<: *default
+    database: production_jobs_queue
     migrations_paths: db/queue_migrate
   cable:
     <<: *default
