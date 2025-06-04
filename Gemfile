@@ -16,6 +16,10 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "rspec-rails"
+  gem "rubocop"
 end
 
 gem "solid_queue", "~> 1.1"
+gem "rubocop-rails", "~> 2.32"
+gem "rubocop-rspec", "~> 3.6"
+gem "rubocop-rspec_rails", "~> 2.31"
