@@ -1,5 +1,5 @@
 services:
-  web:
+  web: &server
     build:
       context: .
     image: pompidou
@@ -13,6 +13,13 @@ services:
     depends_on:
       - espace-membre-db
       - primary-db
+  jobs:
+    <<: *server
+    command: "bin/jobs"
+    entrypoint: ''
+    ports: []
+    depends_on:
+      - web
   primary-db:
     image: postgres:16
     volumes:
