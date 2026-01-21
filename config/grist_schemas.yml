@@ -1,0 +1,27 @@
+grist:
+  schemas:
+    tables:
+      services:
+        id: services_numeriques
+        columns:
+          - id: identifiant
+            fields:
+              label: Identifiant
+          - id: name
+            fields:
+              label: Nom
+          - id: mission
+            fields:
+              label: Mission
+          - id: link
+            fields:
+              label: Lien
+          - id: impact_url
+            fields:
+              label: Matrice d'impact
+          - id: current_phase
+            fields:
+              label: Phase
+          - id: contact_email
+            fields:
+              label: Email de contact

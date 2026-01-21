@@ -34,3 +34,12 @@ services:
     environment:
       POSTGRES_PASSWORD: "dummy"
       PGPORT: 5433
+  grist:
+    image: gristlabs/grist
+    ports:
+      - "8484:8484"
+    volumes:
+      - gristpersist:/persist
+
+volumes:
+  gristpersist:
