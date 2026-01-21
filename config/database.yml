@@ -14,6 +14,7 @@ espace_membre_db_test: &emdb-test
 default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV.fetch("DATABASE_URL") %>
   timeout: 5000
   migrations_paths: db/primary
 
@@ -23,7 +24,6 @@ development:
     database: development
   queue:
     <<: *default
-    url: <%= ENV.fetch("DATABASE_URL") %>
     database: development_jobs_queue
     migrations_paths: db/queue_migrate
   emdb:
