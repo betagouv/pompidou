@@ -169,6 +169,8 @@ GEM
     nio4r (2.7.5)
     nokogiri (1.19.0-aarch64-linux-gnu)
       racc (~> 1.4)
+    nokogiri (1.19.0-x86_64-linux-gnu)
+      racc (~> 1.4)
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -328,6 +330,7 @@ GEM
 PLATFORMS
   aarch64-linux
   aarch64-linux-gnu
+  x86_64-linux
 
 DEPENDENCIES
   blanket_wrapper
@@ -347,6 +350,9 @@ DEPENDENCIES
   rubocop-rspec_rails (~> 2.31)
   solid_queue (~> 1.1)
   tzinfo-data
+
+RUBY VERSION
+  ruby 4.0.1
 
 BUNDLED WITH
   4.0.3
