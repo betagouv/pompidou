@@ -1,24 +1,12 @@
-# README
+# Pompidou
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Pompidou est une micro-application qui assure l'intendance de
+certaines tâches pour la communauté beta.gouv.fr
 
-Things you may want to cover:
+## Architecture
 
-* Ruby version
+L'application est directement branchée à la base de données de
+l'Espace-Membre.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Le programme des tâches lancées est consultable dans le fichier
+`./config/recurring.yml`.
