@@ -345,9 +345,9 @@ DEPENDENCIES
   rb-readline
   rspec-rails
   rubocop
-  rubocop-rails (~> 2.32)
-  rubocop-rspec (~> 3.6)
-  rubocop-rspec_rails (~> 2.31)
+  rubocop-rails
+  rubocop-rspec
+  rubocop-rspec_rails
   solid_queue (~> 1.1)
   tzinfo-data
 

@@ -25,10 +25,9 @@ group :development, :test do
   gem "rb-readline"
   gem "rspec-rails"
   gem "rubocop"
+  gem "rubocop-rails"
+  gem "rubocop-rspec"
+  gem "rubocop-rspec_rails"
 end
 
 gem "solid_queue", "~> 1.1"
-
-gem "rubocop-rails", "~> 2.32"
-gem "rubocop-rspec", "~> 3.6"
-gem "rubocop-rspec_rails", "~> 2.31"
