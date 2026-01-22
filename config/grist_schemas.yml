@@ -25,3 +25,28 @@ grist:
           - id: contact_email
             fields:
               label: Email de contact
+      members:
+        id: Membres_beta_lecture_seule
+        columns:
+          - id: identifiant
+            fields:
+              label: Identifiant
+          - id: name
+            fields:
+              label: Nom
+          - id: gender
+            fields:
+              label: Genre
+          - id: email
+            fields:
+              label: Email
+          - id: secondary_email
+            fields:
+              label: Email secondaire
+          - id: domain
+            fields:
+              label: Domaine
+          - id: active_mission
+            fields:
+              type: Bool
+              label: Actif

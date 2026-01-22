@@ -29,5 +29,9 @@ module EspaceMembre
     rescue ActiveRecord::RecordNotFound
       User.find_by!(secondary_email: email)
     end
+
+    def has_active_mission?
+      active_startups.any?
+    end
   end
 end
