@@ -2,7 +2,7 @@ grist:
   schemas:
     tables:
       services:
-        id: services_numeriques
+        id: Services_numeriques
         columns:
           - id: identifiant
             fields:

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "yaml"
-require "blanket"
 
 class UpdateServicesForGristDocument
   SERVICES_SCHEMA =
@@ -13,18 +12,12 @@ class UpdateServicesForGristDocument
 
   class << self
     def call(document_id)
-      document = GristDocument.new(document_id)
-
-      document.create_table_schema!(SERVICES_SCHEMA) unless document.table_exist?(SERVICES_TABLE_ID)
-
-      document
-        .tables(SERVICES_TABLE_ID)
-        .records
-        .put(
-          body: {
-            records: all_startups_payload
-          }.to_json
-        )
+      UpdateGristDocument.call(
+        document_id: document_id,
+        schema: SERVICES_SCHEMA,
+        table_id: SERVICES_SCHEMA["id"],
+        records: all_startups_payload
+      )
     end
 
     def all_startups_payload
