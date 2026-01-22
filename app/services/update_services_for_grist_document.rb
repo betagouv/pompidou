@@ -3,23 +3,15 @@
 require "yaml"
 require "blanket"
 
-class UpdateGristReplicas
+class UpdateServicesForGristDocument
   SERVICES_SCHEMA =
     YAML
     .load_file(Rails.root.join("config/grist_schemas.yml"))
     .dig("grist", "schemas", "tables", "services")
 
   class << self
-    def call
-      ENV.fetch("GRIST_DOCUMENT_IDS")
-         .split(",")
-         .each { |id| process_document!(id) }
-    end
-
-    private
-
-    def process_document!(id)
-      document = GristDocument.new(id)
+    def call(document_id)
+      document = GristDocument.new(document_id)
 
       document.create_table_schema!(SERVICES_SCHEMA) unless document.table_exist?("Services_numeriques")
 
