@@ -53,4 +53,6 @@ Rails.application.configure do
   config.action_controller.raise_on_missing_callback_actions = true
 
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  config.mission_control.jobs.http_basic_auth_enabled = false
 end

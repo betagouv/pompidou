@@ -18,6 +18,8 @@ gem "httparty"
 
 gem "blanket_wrapper"
 
+gem "mission_control-jobs"
+
 group :development, :test do
   gem "debug"
   gem "guard"
