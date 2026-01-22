@@ -9,14 +9,16 @@ class UpdateServicesForGristDocument
     .load_file(Rails.root.join("config/grist_schemas.yml"))
     .dig("grist", "schemas", "tables", "services")
 
+  SERVICES_TABLE_ID = SERVICES_SCHEMA["id"]
+
   class << self
     def call(document_id)
       document = GristDocument.new(document_id)
 
-      document.create_table_schema!(SERVICES_SCHEMA) unless document.table_exist?("Services_numeriques")
+      document.create_table_schema!(SERVICES_SCHEMA) unless document.table_exist?(SERVICES_TABLE_ID)
 
       document
-        .tables("Services_numeriques")
+        .tables(SERVICES_TABLE_ID)
         .records
         .put(
           body: {
