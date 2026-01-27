@@ -2,7 +2,7 @@ grist:
   schemas:
     tables:
       services:
-        id: Services_numeriques
+        id: Beta_Services_Numeriques
         columns:
           - id: identifiant
             fields:
@@ -26,7 +26,7 @@ grist:
             fields:
               label: Email de contact
       members:
-        id: Membres_beta_lecture_seule
+        id: Beta_Membres
         columns:
           - id: identifiant
             fields:
@@ -50,3 +50,7 @@ grist:
             fields:
               type: Bool
               label: Actif
+          - id: end_mission
+            fields:
+              type: Date
+              label: Date de fin de mission
