@@ -37,8 +37,8 @@ class UpdateMembersForGristDocument
           email: user.primary_email,
           secondary_email: user.secondary_email,
           domain: user.domaine,
-          active_mission: user.has_active_mission?,
-          end_mission: user.active_missions.last&.end,
+          active_mission: user.active_missions.any?,
+          end_mission: user.last_mission&.end
         }
       }
     end

@@ -20,6 +20,8 @@ gem "blanket_wrapper"
 
 gem "mission_control-jobs"
 
+gem "espace_membre-ruby"
+
 group :development, :test do
   gem "debug"
   gem "guard"
