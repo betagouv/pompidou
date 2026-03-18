@@ -25,6 +25,12 @@ grist:
           - id: contact_email
             fields:
               label: Email de contact
+          - id: incubator
+            fields:
+              label: Incubateur
+          - id: incubator_contact
+            fields:
+              label: Contact de l'incubateur
       members:
         id: Beta_Membres
         columns:
