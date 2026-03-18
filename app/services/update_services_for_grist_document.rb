@@ -38,7 +38,9 @@ class UpdateServicesForGristDocument
           current_phase: startup.latest_phase.name,
           contact_email: startup.contact,
           mission: startup.pitch,
-          link: startup.link
+          link: startup.link,
+          incubator: startup.incubator.title,
+          incubator_contact: startup.incubator.contact
         }
       }
     end
