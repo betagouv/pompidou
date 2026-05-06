@@ -24,8 +24,10 @@ gem "espace_membre-ruby"
 
 group :development, :test do
   gem "debug"
+  gem "factory_bot_rails"
   gem "guard"
   gem "guard-rspec"
+  gem "faker", require: false
   gem "rb-readline"
   gem "rspec-rails"
   gem "rubocop"
