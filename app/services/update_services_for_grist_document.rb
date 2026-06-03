@@ -23,7 +23,6 @@ class UpdateServicesForGristDocument
     def all_startups_payload
       EspaceMembre::Startup
         .includes(:latest_phase)
-        .in_phase(:investigation, :construction, :acceleration, :transfer) # FIXME: a scope maybe
         .map { |startup| startup_upsert_payload(startup) }
     end
 
