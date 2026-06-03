@@ -19,6 +19,8 @@ Rails.application.configure do
   config.public_file_server.headers = { "cache-control" => "public, max-age=#{1.year.to_i}" }
 
   # Instruct production to connect to its queue database
+  config.active_job.queue_adapter = :solid_queue
+
   config.solid_queue.connects_to = { database: { writing: :queue } }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
