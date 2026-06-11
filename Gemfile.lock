@@ -81,6 +81,8 @@ GEM
     blanket_wrapper (3.0.2)
       httparty
       recursive-open-struct
+    brakeman (8.0.4)
+      racc
     builder (3.3.0)
     coderay (1.1.3)
     concurrent-ruby (1.3.6)
@@ -371,6 +373,7 @@ PLATFORMS
 
 DEPENDENCIES
   blanket_wrapper
+  brakeman
   debug
   espace_membre-ruby
   factory_bot_rails

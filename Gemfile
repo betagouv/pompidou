@@ -22,6 +22,8 @@ gem "mission_control-jobs"
 
 gem "espace_membre-ruby"
 
+gem "brakeman"
+
 group :development, :test do
   gem "debug"
   gem "factory_bot_rails"
