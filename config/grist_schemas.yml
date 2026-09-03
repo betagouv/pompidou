@@ -19,9 +19,15 @@ grist:
           - id: impact_url
             fields:
               label: Matrice d'impact
+          - id: budget_url
+            fields:
+              label: Lien budget
           - id: current_phase
             fields:
               label: Phase
+          - id: dashlord_url
+            fields:
+              label: Lien Dashlord
           - id: contact_email
             fields:
               label: Email de contact

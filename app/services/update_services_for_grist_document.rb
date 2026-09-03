@@ -39,7 +39,9 @@ class UpdateServicesForGristDocument
           mission: startup.pitch,
           link: startup.link,
           incubator: startup.incubator.title,
-          incubator_contact: startup.incubator.contact
+          incubator_contact: startup.incubator.contact,
+          dashlord_url: startup.dashlord_url,
+          budget_url: startup.budget_url
         }
       }
     end
