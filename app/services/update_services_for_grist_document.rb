@@ -22,7 +22,8 @@ class UpdateServicesForGristDocument
 
     def all_startups_payload
       EspaceMembre::Startup
-        .includes(:latest_phase)
+        .includes(:latest_phase, :incubator)
+        .limit(3)
         .map { |startup| startup_upsert_payload(startup) }
     end
 
@@ -32,16 +33,17 @@ class UpdateServicesForGristDocument
           identifiant: startup.ghid
         },
         fields: {
-          name: startup.name,
-          impact_url: startup.impact_url,
-          current_phase: startup.latest_phase.name,
+          budget_url: startup.budget_url,
           contact_email: startup.contact,
-          mission: startup.pitch,
-          link: startup.link,
+          current_phase: startup.latest_phase.name,
+          current_phase_started_on: startup.latest_phase.start,
+          dashlord_url: startup.dashlord_url,
+          impact_url: startup.impact_url,
           incubator: startup.incubator.title,
           incubator_contact: startup.incubator.contact,
-          dashlord_url: startup.dashlord_url,
-          budget_url: startup.budget_url
+          link: startup.link,
+          mission: startup.pitch,
+          name: startup.name,
         }
       }
     end

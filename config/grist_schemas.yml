@@ -32,6 +32,11 @@ grist:
             fields:
               label: Phase
               untieColIdFromLabel: true
+          - id: current_phase_started_on
+            fields:
+              type: Date
+              label: Début de la phase
+              untieColIdFromLabel: true
           - id: dashlord_url
             fields:
               label: Lien Dashlord
@@ -48,6 +53,7 @@ grist:
             fields:
               label: Contact de l'incubateur
               untieColIdFromLabel: true
+
       members:
         id: Beta_Membres
         columns:
