@@ -23,7 +23,6 @@ class UpdateServicesForGristDocument
     def all_startups_payload
       EspaceMembre::Startup
         .includes(:latest_phase, :incubator)
-        .limit(3)
         .map { |startup| startup_upsert_payload(startup) }
     end
 
