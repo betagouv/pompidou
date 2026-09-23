@@ -6,6 +6,7 @@ class UpdateGristDocument
       document = GristDocument.new(document_id)
 
       document.create_table_schema!(schema) unless document.table_exist?(table_id)
+      document.update_columns!(schema)
 
       document
         .tables(table_id)
