@@ -7,62 +7,81 @@ grist:
           - id: identifiant
             fields:
               label: Identifiant
+              untieColIdFromLabel: true
           - id: name
             fields:
               label: Nom
+              untieColIdFromLabel: true
           - id: mission
             fields:
               label: Mission
+              untieColIdFromLabel: true
           - id: link
             fields:
               label: Lien
+              untieColIdFromLabel: true
           - id: impact_url
             fields:
               label: Matrice d'impact
+              untieColIdFromLabel: true
           - id: budget_url
             fields:
               label: Lien budget
+              untieColIdFromLabel: true
           - id: current_phase
             fields:
               label: Phase
+              untieColIdFromLabel: true
           - id: dashlord_url
             fields:
               label: Lien Dashlord
+              untieColIdFromLabel: true
           - id: contact_email
             fields:
               label: Email de contact
+              untieColIdFromLabel: true
           - id: incubator
             fields:
               label: Incubateur
+              untieColIdFromLabel: true
           - id: incubator_contact
             fields:
               label: Contact de l'incubateur
+              untieColIdFromLabel: true
       members:
         id: Beta_Membres
         columns:
           - id: identifiant
             fields:
               label: Identifiant
+              untieColIdFromLabel: true
           - id: name
             fields:
               label: Nom
+              untieColIdFromLabel: true
           - id: gender
             fields:
               label: Genre
+              untieColIdFromLabel: true
           - id: email
             fields:
               label: Email
+              untieColIdFromLabel: true
           - id: secondary_email
             fields:
               label: Email secondaire
+              untieColIdFromLabel: true
           - id: domain
             fields:
               label: Domaine
+              untieColIdFromLabel: true
           - id: active_mission
             fields:
               type: Bool
               label: Actif
+              untieColIdFromLabel: true
           - id: end_mission
             fields:
               type: Date
               label: Date de fin de mission
+              untieColIdFromLabel: true

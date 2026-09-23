@@ -31,6 +31,16 @@ class GristDocument
       )
   end
 
+  def update_columns!(table_schema)
+    tables(table_schema["id"])
+      .columns
+      .put(
+        body: {
+          columns: table_schema["columns"]
+        }.to_json
+      )
+  end
+
   def wrapper
     api.docs(@doc_id)
   end
